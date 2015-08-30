@@ -17,6 +17,9 @@ defmodule Plotta.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/plot", PlotController, :index
+    get "/plot/:plot_id", PlotController, :show
+    resources "/plot", PlotController, except: [:delete]
   end
 
   # Other scopes may use custom stacks.
