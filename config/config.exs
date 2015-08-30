@@ -9,8 +9,8 @@ use Mix.Config
 config :plotta, Plotta.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "fL+340jcwghx6HXJF8ugheVOoMAz+k938otQRpTIB/RgcyF7WebX30XSlCUGF4Me",
-  render_errors: [default_format: "html"],
+  secret_key_base: "yBBZoHkms5JN00g/0FoGoVtArPAfL8b40xV+SVXNDosWJ7uWLvWS599Y2xYuxWIt",
+  render_errors: [accepts: ~w(html json)],
   pubsub: [name: Plotta.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

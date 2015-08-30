@@ -9,11 +9,13 @@ config :plotta, Plotta.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+# Set a higher stacktrace during test
+config :phoenix, :stacktrace_depth, 20
+
 # Configure your database
 config :plotta, Plotta.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
   database: "plotta_test",
-  pool: Ecto.Adapters.SQL.Sandbox, # Use a sandbox for transactional testing
-  size: 1
+  pool: Ecto.Adapters.SQL.Sandbox
